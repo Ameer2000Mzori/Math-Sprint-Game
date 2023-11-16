@@ -3,11 +3,13 @@
 $color_1: white;
 $color_2: var(--success);
 $color_3: var(--danger);
-$font-family_1: PT Mono, sans-serif;
-$font-family_2: Oxanium, sans-serif;
+$font-family_1: mono, sans-serif;
+$font-family_2: oxanium, sans-serif;
+
 * {
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: dodgerblue;
   --select-color: dodgerblue;
@@ -25,6 +27,7 @@ body {
   background: #e8e8e8;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23161616' fill-opacity='0.1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
 }
+
 .game-container {
   border: 1px solid black;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5);
@@ -35,6 +38,7 @@ body {
   user-select: none;
   margin-top: 100px;
 }
+
 .header {
   background: var(--primary-color);
   color: $color_1;
@@ -47,10 +51,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card {
   margin: 5px auto 10px;
   height: 600px;
 }
+
 input[type="radio"] {
   opacity: 0;
   width: 100%;
@@ -60,10 +66,12 @@ input[type="radio"] {
   cursor: pointer;
   z-index: 2;
 }
+
 .selection-container {
   position: relative;
   top: 65px;
 }
+
 .radio-container {
   width: 90%;
   height: 75px;
@@ -72,16 +80,19 @@ input[type="radio"] {
   border: 2px solid black;
   border-radius: 5px;
 }
+
 label {
   position: relative;
   top: 20px;
   left: 20px;
   font-size: 30px;
 }
+
 .selected-label {
   background: var(--select-color);
   color: $color_1;
 }
+
 .best-score {
   position: relative;
   top: -100px;
@@ -92,13 +103,16 @@ label {
   text-align: center;
   font-size: 18px;
   max-width: fit-content;
+
   span {
     margin: 0;
+
     &:last-child {
       font-size: 24px;
     }
   }
 }
+
 .selection-footer {
   top: 134px;
   width: 100%;
@@ -109,23 +123,28 @@ label {
   align-items: center;
   position: relative;
 }
+
 .height-240 {
   height: 240px;
   width: 100%;
 }
+
 .height-500 {
   height: 500px;
   width: 100%;
 }
+
 .item-container {
   height: 552px;
   overflow-y: scroll;
   position: relative;
   -ms-overflow-style: none;
+
   &::-webkit-scrollbar {
     display: none;
   }
 }
+
 .item {
   display: flex;
   align-items: baseline;
@@ -134,11 +153,13 @@ label {
   margin: 0 50px;
   user-select: none;
 }
+
 .finished {
   > h1 {
     opacity: 0.5;
   }
 }
+
 .selected-item {
   background: var(--select-color);
   position: fixed;
@@ -147,6 +168,7 @@ label {
   width: 529px;
   height: 80px;
 }
+
 .item-footer {
   width: 100%;
   height: 90px;
@@ -157,6 +179,7 @@ label {
   position: relative;
   top: 1px;
 }
+
 button {
   cursor: pointer;
   height: 50px;
@@ -166,30 +189,37 @@ button {
   color: $color_1;
   border: none;
   outline: none;
+
   &:hover {
     filter: brightness(110%);
   }
+
   &:active {
     transform: scale(0.99);
   }
 }
+
 .wrong {
   width: 40%;
   background: var(--danger);
   margin-right: 25px;
 }
+
 .right {
   width: 40%;
   background: var(--success);
 }
+
 .start {
   width: 90%;
   background: var(--primary-color);
 }
+
 .play-again {
   width: 90%;
   background: var(--primary-color);
 }
+
 .countdown {
   margin-top: 45%;
   font-size: 100px;
@@ -197,6 +227,7 @@ button {
   user-select: none;
   cursor: pointer;
 }
+
 .score-container {
   height: 600px;
   display: flex;
@@ -204,6 +235,7 @@ button {
   justify-content: center;
   align-items: center;
 }
+
 .score-footer {
   width: 100%;
   height: 90px;
@@ -212,62 +244,78 @@ button {
   position: relative;
   top: -30px;
 }
+
 .title {
   font-size: 45px;
 }
+
 .final-time {
   font-size: 100px;
   margin: 0;
   color: $color_2;
 }
+
 .base-time {
   margin-top: 100px;
   margin-bottom: 0;
 }
+
 .penalty-time {
   color: $color_3;
 }
+
 @media screen and (max-width: 1800px) {
   .game-container {
     margin-top: 35px;
   }
+
   .selected-item {
     top: 380px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .game-container {
     width: 100%;
     margin-top: 0;
     border: none;
   }
+
   .selected-item {
     top: 345px;
   }
+
   .header {
     font-size: 1.2rem;
   }
+
   .countdown {
     margin-top: 60%;
   }
+
   .selection-container {
     top: 100px;
   }
+
   .radio-container {
     width: 93%;
     margin: 15px;
   }
+
   label {
     font-size: 1.7rem;
   }
+
   .best-score {
     font-size: 1rem;
     left: 245px;
   }
+
   .selection-footer {
     top: 183px;
   }
 }
+
 @media screen and (max-width: 376px) {
   .best-score {
     left: 232px;

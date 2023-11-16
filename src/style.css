@@ -1,4 +1,5 @@
 @import "https://fonts.googleapis.com/css?family=Oxanium|PT+Mono&display=swap";
+
 * {
   box-sizing: border-box;
 }
@@ -12,7 +13,7 @@
 
 body {
   margin: 0;
-  font-family: PT Mono, sans-serif;
+  font-family: mono, sans-serif;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -35,7 +36,7 @@ body {
 .header {
   background: var(--primary-color);
   color: white;
-  font-family: Oxanium, sans-serif;
+  font-family: oxanium, sans-serif;
   font-size: 24px;
   text-shadow: 1px 2px 2px black;
   letter-spacing: 2px;
@@ -97,9 +98,11 @@ label {
   font-size: 18px;
   max-width: fit-content;
 }
+
 .best-score span {
   margin: 0;
 }
+
 .best-score span:last-child {
   font-size: 24px;
 }
@@ -131,6 +134,7 @@ label {
   position: relative;
   -ms-overflow-style: none;
 }
+
 .item-container::-webkit-scrollbar {
   display: none;
 }
@@ -173,14 +177,16 @@ button {
   height: 50px;
   border-radius: 5px;
   font-size: 25px;
-  font-family: Oxanium, sans-serif;
+  font-family: oxanium, sans-serif;
   color: white;
   border: none;
   outline: none;
 }
+
 button:hover {
   filter: brightness(110%);
 }
+
 button:active {
   transform: scale(0.99);
 }
@@ -254,47 +260,56 @@ button:active {
   .game-container {
     margin-top: 35px;
   }
+
   .selected-item {
     top: 380px;
   }
 }
+
 @media screen and (max-width: 500px) {
   .game-container {
     width: 100%;
     margin-top: 0;
     border: none;
   }
+
   .selected-item {
     top: 345px;
   }
+
   .header {
     font-size: 1.2rem;
   }
+
   .countdown {
     margin-top: 60%;
   }
+
   .selection-container {
     top: 100px;
   }
+
   .radio-container {
     width: 93%;
     margin: 15px;
   }
+
   label {
     font-size: 1.7rem;
   }
+
   .best-score {
     font-size: 1rem;
     left: 245px;
   }
+
   .selection-footer {
     top: 183px;
   }
 }
+
 @media screen and (max-width: 376px) {
   .best-score {
     left: 232px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
