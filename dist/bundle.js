@@ -1,1 +1,1 @@
-console.log("hallo world");
+(()=>{var t=document.getElementsByClassName("game-Wrap")[0];t.addEventListener("click",(function(e){var n=e.target.getAttribute("data-value");console.log(n),t.innerHTML="";var o=document.createElement("p");o.classList="count-Down-Num",t.appendChild(o),o.textContent="3",setTimeout((function(){o.textContent="2"}),1e3),setTimeout((function(){o.textContent="1"}),2e3),setTimeout((function(){o.textContent="GO!"}),3e3)}))})();
